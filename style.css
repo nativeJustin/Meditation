@@ -1,0 +1,85 @@
+body {
+    background-color: tan;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    margin: auto; 
+    font-family: 'Anton', sans-serif;
+}
+
+h1 {
+    padding-top: 0px; 
+}
+
+.circle {
+border-radius: 50%;
+height: 400px;
+width: 400px; 
+background-color: teal; 
+top: 15%; 
+display: flex;
+position: fixed;
+animation-name: beat; 
+animation-iteration-count: infinite;
+animation-duration: 6s;
+animation-direction: alternate;
+}
+
+.circle:after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 0px;
+    left: 0px;
+  }
+
+.circle:before {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+
+@keyframes backdiv {
+    50% {
+      background: #ffe6f2;
+    }
+  }
+
+@keyframes beat {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.3) rotate(-45deg);
+    }
+  }
+
+.instructions{
+    padding-top: 30%; 
+    }
+    
+    @media (max-width: 1200px) {
+
+        .circle {
+            height: 200px;
+            width: 200px; 
+        }
+    
+        }
+
+    @media (max-width: 800px) {
+
+    .circle {
+        height: 150px;
+        width: 150px; 
+    }
+
+    }
+
